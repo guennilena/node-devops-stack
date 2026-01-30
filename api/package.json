@@ -1,0 +1,21 @@
+{
+  "name": "shipping-tracker-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node dist/index.js",
+    "build": "node scripts/build.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "fastify": "^4.28.1",
+    "pino": "^9.3.2",
+    "pg": "^8.12.0",
+    "prom-client": "^15.1.3",
+    "uuid": "^11.0.3"
+  }
+}
+
