@@ -2,14 +2,20 @@
 
 ![CI](https://github.com/<dein-user>/<dein-repo>/actions/workflows/ci.yml/badge.svg)
 
-
 A containerized Node.js API with a production-ish local observability stack.
 
-**Components**
-- Fastify API (structured logging, Prometheus metrics)
-- PostgreSQL
-- Prometheus + Grafana dashboards
-- Loki + Promtail for centralized logs
+## Architecture
+
+<a href="docs/architecture.png">
+  <img src="docs/architecture.png" width="900" alt="Architecture diagram">
+</a>
+
+**Overview**
+- Single Fastify API container exposes REST endpoints
+- PostgreSQL for persistence
+- Prometheus scrapes metrics from the API
+- Loki aggregates logs via Promtail
+- Grafana visualizes metrics and logs
 
 ---
 
